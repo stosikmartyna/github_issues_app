@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
     align-items: center;
     background-color: #101022;
+    border-top-left-radius: 7px;
     display: flex;
     height: 40px;
 `;
