@@ -1,7 +1,11 @@
 import React from 'react';
+import { GithubContainer } from './components/GithubContainer/GithubContainer.component';
+import { Container } from './App.styles';
 
 export const App: React.FC = () => {
   return (
-    <h1>Github issues app</h1>
+    <Container>
+      <GithubContainer />
+    </Container>
   );
 };
