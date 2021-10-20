@@ -38,10 +38,10 @@ export const Text = styled.span`
 
 export const Icon = styled.img`
     cursor: pointer;
-    filter: drop-shadow(0 0 0.1rem #c4c2c2);
+    filter: none;
     transition: filter .3s ease-in-out;
 
     :hover {
-        filter: drop-shadow(0 0 0.1rem ${colors.textGrey});
+        filter: drop-shadow(0 0 0.2rem #e0e0e0);
     }
 `;

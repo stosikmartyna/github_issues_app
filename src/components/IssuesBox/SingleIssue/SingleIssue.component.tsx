@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
     Container,
     Date,
@@ -8,30 +8,39 @@ import {
 } from './SingleIssue.styles';
 
 export const SingleIssue:React.FC = () => {
+    const [isClicked, setIsClicked] = useState<Boolean>(false);
+
+    const handleIsClicked = () => {
+        setIsClicked(!isClicked);
+    };
+
     return (
         <Container>
             <Date>19-07-2016</Date>
-            <Wrapper>
+            <Wrapper onClick={handleIsClicked}>
                 <Text>Page Changes</Text>
-                <Icon src={'./images/icon-star.svg'} />
+                {isClicked 
+                    ? <Icon src={'./images/dark-star.svg'} />
+                    : <Icon src={'./images/white-star.svg'} />
+                }
             </Wrapper>
             <Wrapper>
                 <Text>Review of last issues</Text>
-                <Icon src={'./images/icon-star.svg'} />
+                <Icon src={'./images/white-star.svg'} />
             </Wrapper>
             <Date>19-07-2016</Date>
             <Wrapper>
                 <Text>Visual UI Update Review</Text>
-                <Icon src={'./images/icon-star.svg'} />
+                <Icon src={'./images/white-star.svg'} />
             </Wrapper>
             <Wrapper>
                 <Text>Sidebar changes</Text>
-                <Icon src={'./images/icon-star.svg'} />
+                <Icon src={'./images/white-star.svg'} />
             </Wrapper>
             <Date>19-07-2016</Date>
             <Wrapper>
                 <Text>Crash update</Text>
-                <Icon src={'./images/icon-star.svg'} />
+                <Icon src={'./images/white-star.svg'} />
             </Wrapper>
             <Wrapper>
                 <Text>Page visual UI update review</Text>
@@ -40,20 +49,20 @@ export const SingleIssue:React.FC = () => {
             <Date>19-07-2016</Date>
             <Wrapper>
                 <Text>Sidebar update</Text>
-                <Icon src={'./images/icon-star.svg'} />
+                <Icon src={'./images/white-star.svg'} />
             </Wrapper>
             <Wrapper>
                 <Text>Page Changes</Text>
-                <Icon src={'./images/icon-star.svg'} />
+                <Icon src={'./images/white-star.svg'} />
             </Wrapper>
             <Date>19-07-2016</Date>
             <Wrapper>
                 <Text>Page Changes</Text>
-                <Icon src={'./images/icon-star.svg'} />
+                <Icon src={'./images/white-star.svg'} />
             </Wrapper>
             <Wrapper>
                 <Text>Page Changes</Text>
-                <Icon src={'./images/icon-star.svg'} />
+                <Icon src={'./images/white-star.svg'} />
             </Wrapper>
         </Container>
     );
