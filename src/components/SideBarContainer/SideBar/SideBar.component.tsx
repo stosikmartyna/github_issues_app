@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
     Container, 
     Box,
@@ -9,9 +9,15 @@ import {
 } from './SideBar.styles';
 
 export const SideBar: React.FC = () => {
+    const [isActive, setIsActive] = useState<boolean>(false);
+
+    const handleIsActive = () => {
+        setIsActive(!isActive);
+    };
+
     return (
         <Container>
-            <Box>
+            <Box isActive={isActive} onClick={handleIsActive}>
                 <Wrapper>
                     <Icon src={'./images/icon-github.svg'} />
                     <Text>All</Text>

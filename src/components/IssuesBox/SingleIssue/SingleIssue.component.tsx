@@ -16,30 +16,30 @@ export const SingleIssue:React.FC = () => {
                 <Icon src={'./images/icon-star.svg'} />
             </Wrapper>
             <Wrapper>
-                <Text>Page Changes</Text>
+                <Text>Review of last issues</Text>
                 <Icon src={'./images/icon-star.svg'} />
             </Wrapper>
             <Date>19-07-2016</Date>
             <Wrapper>
-                <Text>Page Changes</Text>
+                <Text>Visual UI Update Review</Text>
                 <Icon src={'./images/icon-star.svg'} />
             </Wrapper>
             <Wrapper>
-                <Text>Page Changes</Text>
-                <Icon src={'./images/icon-star.svg'} />
-            </Wrapper>
-            <Date>19-07-2016</Date>
-            <Wrapper>
-                <Text>Page Changes</Text>
-                <Icon src={'./images/icon-star.svg'} />
-            </Wrapper>
-            <Wrapper>
-                <Text>Page Changes</Text>
+                <Text>Sidebar changes</Text>
                 <Icon src={'./images/icon-star.svg'} />
             </Wrapper>
             <Date>19-07-2016</Date>
             <Wrapper>
-                <Text>Page Changes</Text>
+                <Text>Crash update</Text>
+                <Icon src={'./images/icon-star.svg'} />
+            </Wrapper>
+            <Wrapper>
+                <Text>Page visual UI update review</Text>
+                <Icon src={'./images/icon-star.svg'} />
+            </Wrapper>
+            <Date>19-07-2016</Date>
+            <Wrapper>
+                <Text>Sidebar update</Text>
                 <Icon src={'./images/icon-star.svg'} />
             </Wrapper>
             <Wrapper>

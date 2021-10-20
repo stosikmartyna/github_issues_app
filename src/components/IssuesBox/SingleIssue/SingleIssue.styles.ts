@@ -37,5 +37,11 @@ export const Text = styled.span`
 `;
 
 export const Icon = styled.img`
+    cursor: pointer;
     filter: drop-shadow(0 0 0.1rem #c4c2c2);
+    transition: filter .3s ease-in-out;
+
+    :hover {
+        filter: drop-shadow(0 0 0.1rem ${colors.textGrey});
+    }
 `;

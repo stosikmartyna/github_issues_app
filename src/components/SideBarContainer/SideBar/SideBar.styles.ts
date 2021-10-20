@@ -9,8 +9,13 @@ export const Container = styled.div`
     height: 100%;
 `;
 
-export const Box = styled.div`
+interface BoxProps {
+    isActive?: boolean;
+}
+
+export const Box = styled.div<BoxProps>`
     align-items: center;
+    background-color: ${({isActive}) => isActive && `${colors.activeBlue}`};
     cursor: pointer;
     display: flex;
     justify-content: space-between;
