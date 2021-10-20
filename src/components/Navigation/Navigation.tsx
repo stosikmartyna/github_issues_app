@@ -5,15 +5,15 @@ import {
     Icon,
     Text,
     Number,
-} from './SideBar.styles';
+} from './Navigation.styles';
 
-interface SideBarProps {
+interface NavigationProps {
     icon: string;
     text: string;
     number: number;
 };
 
-export const SideBar: React.FC<SideBarProps> = ({ icon, text, number }) => {
+export const Navigation: React.FC<NavigationProps> = ({ icon, text, number }) => {
     const [isActive, setIsActive] = useState<boolean>(false);
 
     const handleIsActive = () => {

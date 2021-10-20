@@ -13,7 +13,7 @@ export const Container = styled.div`
 export const SideBarWrapper = styled.div`
     border-bottom-left-radius: 7px;
     color: ${colors.white};
-    background-color:rgb(16, 16, 34, 0.9);
+    background-color: rgb(16, 16, 34, 0.9);
     backdrop-filter: blur(6px);
     height: 100%;
 `;

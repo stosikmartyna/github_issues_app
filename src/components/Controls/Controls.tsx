@@ -4,9 +4,9 @@ import {
     CloseButton,
     MinimizeButton,
     MaximizeButton, 
-} from './Navigation.styles';
+} from './Controls.styles';
 
-export const Navigation: React.FC = () => {
+export const Controls: React.FC = () => {
     return (
         <Container>
             <CloseButton />

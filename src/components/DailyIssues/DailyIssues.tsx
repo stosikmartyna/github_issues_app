@@ -5,14 +5,14 @@ import {
     Wrapper,
     Text,
     Icon,
-} from './SingleIssue.styles';
+} from './DailyIssues.styles';
 
-interface SingleIssueProps {
+interface DailyIssuesProps {
     date: string;
     issues: string[];
 };
 
-export const SingleIssue: React.FC<SingleIssueProps> = ({ date, issues }) => {
+export const DailyIssues: React.FC<DailyIssuesProps> = ({ date, issues }) => {
     const [isClicked, setIsClicked] = useState<boolean>(false);
 
     const handleIsClicked = () => {
@@ -22,9 +22,9 @@ export const SingleIssue: React.FC<SingleIssueProps> = ({ date, issues }) => {
     return (
         <Container>
             <Date>{date}</Date>
-            {issues.map((issue: string) => {
+            {issues.map((issue: string, index: number) => {
                 return (
-                    <Wrapper onClick={handleIsClicked}>
+                    <Wrapper key={index} onClick={handleIsClicked}>
                         <Text>{issue}</Text>
                         {isClicked 
                             ? <Icon src={'./images/dark-star.svg'} />
