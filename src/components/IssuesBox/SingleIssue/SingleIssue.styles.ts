@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { colors } from '../../../constants/colors';
 
 export const Container = styled.div`
     padding: 10px 10px;
@@ -6,22 +7,22 @@ export const Container = styled.div`
     height: 475px;
 
     &::-webkit-scrollbar {
-        background-color: #E0E0E0;
+        background-color: ${colors.borderGrey};
         border-radius: 20px;
         width: 7px;
     }
 `;
 
 export const Date = styled.span`
-    color: #8A8995;
+    color: ${colors.dateGrey};
     font-size: 12px;
     letter-spacing: .5px;
 `;
 
 export const Wrapper = styled.div`
     align-items: center;
-    background-color: #FFFFFF;
-    border: 1px solid #E0E0E0;
+    background-color: ${colors.white};
+    border: 1px solid ${colors.borderGrey};
     border-radius: 7px;
     display: flex;
     justify-content: space-between;
@@ -30,7 +31,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Text = styled.span`
-    color: #080606;
+    color: ${colors.textGrey};
     font-size: 15px;
     letter-spacing: .5px;
 `;

@@ -1,15 +1,16 @@
 import styled from 'styled-components';
+import { colors } from '../../../constants/colors';
 
 export const Container = styled.div`
     align-items: center;
-    background-color: #101022;
+    background-color: ${colors.navyBlue};
     border-top-left-radius: 7px;
     display: flex;
     height: 40px;
 `;
 
 export const CloseButton = styled.div`
-    background-color: #FF594F;
+    background-color: ${colors.red};
     border-radius: 50%;
     height: 10px;
     margin-left: 10px;
@@ -17,9 +18,9 @@ export const CloseButton = styled.div`
 `;
 
 export const MinimizeButton = styled(CloseButton)`
-    background-color: #FFBC1B;
+    background-color: ${colors.yellow};
 `;
 
 export const MaximizeButton = styled(CloseButton)`
-    background-color: #00CD46;
+    background-color: ${colors.green};
 `;
