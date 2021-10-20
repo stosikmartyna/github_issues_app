@@ -5,6 +5,7 @@ export const colors = {
     textGrey: '#080606',
     navyBlue: '#101022',
     activeBlue: '#292A48',
+    activeBlueHover: '#1c1d35',
     red: '#FF594F',
     yellow: '#FFBC1B',
     green: '#00CD46',

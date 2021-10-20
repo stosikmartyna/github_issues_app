@@ -1,14 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../../constants/colors';
 
-export const Container = styled.div`
-    border-bottom-left-radius: 7px;
-    color: ${colors.white};
-    background-color:rgb(16, 16, 34, 0.9);
-    backdrop-filter: blur(6px);
-    height: 100%;
-`;
-
 interface BoxProps {
     isActive?: boolean;
 }
@@ -20,6 +12,11 @@ export const Box = styled.div<BoxProps>`
     display: flex;
     justify-content: space-between;
     height: 50px;
+    transition: background-color .3s ease-in-out;
+
+    :hover {
+        background-color: ${({isActive}) => isActive ? `${colors.activeBlueHover}` : `${colors.navyBlue}`}
+    }
 `;
 
 export const Wrapper = styled.div``;
