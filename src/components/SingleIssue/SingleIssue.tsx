@@ -12,13 +12,12 @@ export const SingleIssue: React.FC<SingleIssueProps> = ({ issue }) => {
         setIsClicked(!isClicked);
     };
 
+    const iconSrc = `./images/${isClicked ? 'checked' : 'unchecked'}-star.svg`;
+
     return (
         <Wrapper onClick={handleClick}>
             <Text>{issue}</Text>
-            {isClicked 
-                ? <Icon src={'./images/dark-star.svg'} />
-                : <Icon src={'./images/white-star.svg'} />
-            }
+            <Icon src={iconSrc} />
         </Wrapper>
     );
 };

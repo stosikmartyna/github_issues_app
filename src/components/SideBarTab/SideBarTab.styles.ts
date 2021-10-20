@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { colors } from '../../constants/colors';
 
 interface BoxProps {
-    isActive?: boolean;
+    isActive: boolean;
 }
 
 export const Box = styled.div<BoxProps>`
@@ -12,6 +12,7 @@ export const Box = styled.div<BoxProps>`
     display: flex;
     justify-content: space-between;
     height: 50px;
+    padding: 0 10px;
     transition: background-color .3s ease-in-out;
 
     :hover {
@@ -19,16 +20,17 @@ export const Box = styled.div<BoxProps>`
     }
 `;
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+    align-items: center;
+    display: flex;
+`;
 
 export const Icon = styled.img`
-    margin: 0 10px;
+    margin-right: 10px;
 `;
 
 export const Text = styled.span`
     font-size: 14px;
 `;
 
-export const Number = styled(Text)`
-    margin-right: 10px;
-`;
+export const IssuesQuantity = styled(Text)``;
