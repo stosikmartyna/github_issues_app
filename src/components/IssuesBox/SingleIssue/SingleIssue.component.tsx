@@ -7,8 +7,13 @@ import {
     Icon,
 } from './SingleIssue.styles';
 
-export const SingleIssue:React.FC = () => {
-    const [isClicked, setIsClicked] = useState<Boolean>(false);
+interface SingleIssueProps {
+    date: string;
+    issues: string[];
+};
+
+export const SingleIssue: React.FC<SingleIssueProps> = ({ date, issues }) => {
+    const [isClicked, setIsClicked] = useState<boolean>(false);
 
     const handleIsClicked = () => {
         setIsClicked(!isClicked);
@@ -16,54 +21,18 @@ export const SingleIssue:React.FC = () => {
 
     return (
         <Container>
-            <Date>19-07-2016</Date>
-            <Wrapper onClick={handleIsClicked}>
-                <Text>Page Changes</Text>
-                {isClicked 
-                    ? <Icon src={'./images/dark-star.svg'} />
-                    : <Icon src={'./images/white-star.svg'} />
-                }
-            </Wrapper>
-            <Wrapper>
-                <Text>Review of last issues</Text>
-                <Icon src={'./images/white-star.svg'} />
-            </Wrapper>
-            <Date>19-07-2016</Date>
-            <Wrapper>
-                <Text>Visual UI Update Review</Text>
-                <Icon src={'./images/white-star.svg'} />
-            </Wrapper>
-            <Wrapper>
-                <Text>Sidebar changes</Text>
-                <Icon src={'./images/white-star.svg'} />
-            </Wrapper>
-            <Date>19-07-2016</Date>
-            <Wrapper>
-                <Text>Crash update</Text>
-                <Icon src={'./images/white-star.svg'} />
-            </Wrapper>
-            <Wrapper>
-                <Text>Page visual UI update review</Text>
-                <Icon src={'./images/icon-star.svg'} />
-            </Wrapper>
-            <Date>19-07-2016</Date>
-            <Wrapper>
-                <Text>Sidebar update</Text>
-                <Icon src={'./images/white-star.svg'} />
-            </Wrapper>
-            <Wrapper>
-                <Text>Page Changes</Text>
-                <Icon src={'./images/white-star.svg'} />
-            </Wrapper>
-            <Date>19-07-2016</Date>
-            <Wrapper>
-                <Text>Page Changes</Text>
-                <Icon src={'./images/white-star.svg'} />
-            </Wrapper>
-            <Wrapper>
-                <Text>Page Changes</Text>
-                <Icon src={'./images/white-star.svg'} />
-            </Wrapper>
+            <Date>{date}</Date>
+            {issues.map((issue: string) => {
+                return (
+                    <Wrapper onClick={handleIsClicked}>
+                        <Text>{issue}</Text>
+                        {isClicked 
+                            ? <Icon src={'./images/dark-star.svg'} />
+                            : <Icon src={'./images/white-star.svg'} />
+                        }
+                    </Wrapper>
+                )
+            })}
         </Container>
     );
 };

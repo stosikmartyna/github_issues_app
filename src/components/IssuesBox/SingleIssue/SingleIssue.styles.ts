@@ -1,17 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '../../../constants/colors';
 
-export const Container = styled.div`
-    padding: 10px 10px;
-    overflow: auto;
-    height: 475px;
-
-    &::-webkit-scrollbar {
-        background-color: ${colors.borderGrey};
-        border-radius: 20px;
-        width: 7px;
-    }
-`;
+export const Container = styled.div``;
 
 export const Date = styled.span`
     color: ${colors.dateGrey};
