@@ -11,8 +11,14 @@ export const Container = styled.div`
     width: 100%;
 
     &::-webkit-scrollbar {
-        background-color: ${colors.borderGrey};
         border-radius: 20px;
         width: 7px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background-color: ${colors.borderGrey};
+        border-right: none;
+        border-left: none;
+        border-radius: 20px;   
     }
 `;
